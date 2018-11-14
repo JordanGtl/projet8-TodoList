@@ -95,7 +95,13 @@ class TaskController extends Controller
             return $this->redirectToRoute('task_list');
         }
 
-        if($task->getUser() != $user)
+        if($task->getUser() != $user && $task->getUser() != null)
+        {
+            $this->addFlash('error', 'Vous ne pouvez pas supprimer une tâches qui ne vous appartient pas.');
+            return $this->redirectToRoute('task_list');
+        }
+
+        if($task->getUser() == null && !$this->container->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
         {
             $this->addFlash('error', 'Vous ne pouvez pas supprimer une tâches qui ne vous appartient pas.');
             return $this->redirectToRoute('task_list');
