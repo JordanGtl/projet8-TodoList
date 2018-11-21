@@ -4,15 +4,14 @@ namespace Tests\AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class DefaultControllerTest extends WebTestCase
+class DefaultControllerTest extends BaseController
 {
     public function testIndex()
     {
-        $client = static::createClient();
+        $this->offlineClient('GET', '/', 302);
 
-        $crawler = $client->request('GET', '/');
+        $this->onlineClient('GET', '/', 200);
 
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
-        $this->assertContains('Welcome to Symfony', $crawler->filter('#container h1')->text());
+        //$this->assertContains('Welcome to Symfony', $crawler->filter('#container h1')->text());
     }
 }

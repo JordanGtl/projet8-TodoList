@@ -89,12 +89,6 @@ class TaskController extends Controller
     {
         $user = $this->getUser();
 
-        if($user == null)
-        {
-            $this->addFlash('error', 'Une erreur est survenus lors de la supression de la tâche.');
-            return $this->redirectToRoute('task_list');
-        }
-
         if($task->getUser() != $user && $task->getUser() != null)
         {
             $this->addFlash('error', 'Vous ne pouvez pas supprimer une tâches qui ne vous appartient pas.');

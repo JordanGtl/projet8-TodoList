@@ -22,12 +22,17 @@ class TaskFixtures extends Fixture implements DependentFixtureInterface
 
         for ($i = 0; $i < 30; $i++)
         {
-
             $task = new Task();
             $task->setTitle($faker->text(30));
             $task->setContent($faker->text(200));
             $task->setCreatedAt($faker->dateTimeBetween('-100 days', 'now'));
-            $task->setUser((rand(1, 5) > 2) ? $this->getReference('AppBundle\Entity\User_'.rand(0, 3)) : null);
+
+            if($i == 0)
+                $task->setUser(null);
+            else if($i == 1)
+                $this->getReference('AppBundle\Entity\User_2');
+            else
+                $task->setUser((rand(1, 5) > 2) ? $this->getReference('AppBundle\Entity\User_'.rand(0, 3)) : null);
 
             $manager->persist($task);
             // store for usage later as App\Entity\ClassName_#COUNT#

@@ -39,7 +39,7 @@ class TaskTest extends WebTestCase
 
     public function testTitleIsNotNull()
     {
-        $this->task->setTitle('title test');
+        $this->task->setTitle('Title test');
 
         $this->assertEquals('Title test', $this->task->getTitle());
     }
@@ -51,7 +51,7 @@ class TaskTest extends WebTestCase
 
     public function testContentIsNotNull()
     {
-        $this->task->setTitle('Content test');
+        $this->task->setContent('Content test');
 
         $this->assertEquals('Content test', $this->task->getContent());
     }
