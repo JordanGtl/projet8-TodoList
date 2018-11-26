@@ -30,7 +30,7 @@ class TaskFixtures extends Fixture implements DependentFixtureInterface
             if($i == 0)
                 $task->setUser(null);
             else if($i == 1)
-                $this->getReference('AppBundle\Entity\User_2');
+                $task->setUser($this->getReference('AppBundle\Entity\User_2'));
             else
                 $task->setUser((rand(1, 5) > 2) ? $this->getReference('AppBundle\Entity\User_'.rand(0, 3)) : null);
 

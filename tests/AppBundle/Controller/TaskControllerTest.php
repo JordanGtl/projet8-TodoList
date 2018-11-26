@@ -71,6 +71,8 @@ class TaskControllerTest extends BaseController
 
     public function testTaskDelete()
     {
+        $this->onlineClient('GET', '/tasks/1/delete', 302);
+
         $this->onlineClient('GET', '/tasks/2/delete', 302);
 
         $this->onlineClient('GET', '/tasks/'.$this->taskid.'/delete', 302);
