@@ -8,7 +8,7 @@ use Symfony\Component\Form\Test\TypeTestCase;
 
 class UserTypeTest extends TypeTestCase
 {
-    /*public function testSubmitValidData()
+    public function testSubmitValidData()
     {
         $formData = array(
             'username' => 'member1u',
@@ -42,5 +42,5 @@ class UserTypeTest extends TypeTestCase
         foreach (array_keys($formData) as $key) {
             $this->assertArrayHasKey($key, $children);
         }
-    }*/
+    }
 }
