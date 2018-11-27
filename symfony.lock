@@ -164,15 +164,6 @@
     "symfony/polyfill-util": {
         "version": "v1.10.0"
     },
-    "symfony/security-bundle": {
-        "version": "3.3",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "3.3",
-            "ref": "f8a63faa0d9521526499c0a8f403c9964ecb0527"
-        }
-    },
     "symfony/swiftmailer-bundle": {
         "version": "2.5",
         "recipe": {
