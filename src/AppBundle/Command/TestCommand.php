@@ -73,7 +73,9 @@ class TestCommand extends Command
         ##################################################################################
         ## run phpunit test
         ##################################################################################
-        //$shell = shell_exec('php bin/phpunit --coverage-html=cover');
-        //$output->write($shell);
+        $shell = shell_exec('php bin/phpunit --coverage-html=cover');
+        $output->write($shell);
+
+        $output->writeln('Tests : Done');
     }
 }

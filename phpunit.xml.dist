@@ -39,8 +39,10 @@
                 <directory>src/AppBundle/AppBundle.php</directory>
                 <directory>src/*Bundle/Resources</directory>
                 <directory>src/AppBundle/DataFixtures</directory>
+                <directory>src/AppBundle/Command</directory>
                 <directory>src/*/*Bundle/Resources</directory>
                 <directory>src/*/Bundle/*Bundle/Resources</directory>
+                <directory>src/.bootstrap.php</directory>
             </exclude>
         </whitelist>
     </filter>
