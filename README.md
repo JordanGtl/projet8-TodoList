@@ -28,3 +28,7 @@ _Pour la production_
 - 5.1 Installer la base de données avec la commande : php bin/console doctrine:database:create
 - 5.2 Créer les tables de la base de données avec la commande : php bin/console doctrine:schema:update
 - 5.3 Si vous voulez utiliser le jeu de démo, charger les fixtures avec la commande : php bin/console doctrine:fixtures:load
+
+**Contribution / Contribute**
+
+See "Contribute.md" file
